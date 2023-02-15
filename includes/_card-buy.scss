@@ -1,0 +1,62 @@
+.card-buy {
+  &__price sup {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    padding: 20px;
+    background: $SecondaryGray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 4px;
+  }
+
+  &__old-price {
+    margin-bottom: 16px;
+  }
+
+  &__discount {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .card-buy {
+    &__old-price {
+      margin-bottom: 12px;
+    }
+
+    &__price sup {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__item {
+      padding: 16px;
+    }
+  }
+}

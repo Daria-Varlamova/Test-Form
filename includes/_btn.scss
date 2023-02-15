@@ -1,0 +1,49 @@
+.btn {
+  font-family: 'Graphik-LC';
+  padding: 18px 48px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #3d3bff;
+  border-radius: 12px;
+  transition: background 0.3s linear;
+
+  &:disabled {
+    background: #edecea;
+    color: #c3c2be;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn:hover {
+    background: #000000;
+    transition: background 0.3s linear;
+  }
+
+  .btn:disabled:hover {
+    background: #edecea;
+    color: #c3c2be;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .card {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,16 @@
+.card {
+  padding: 40px;
+  border-radius: 20px;
+  background: $White;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 868px) {
+  .card {
+    padding: 32px 120px;
+  }
+}

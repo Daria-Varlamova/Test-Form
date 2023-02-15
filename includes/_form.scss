@@ -1,0 +1,86 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 40px;
+
+  .form-input {
+    width: 100%;
+    padding: 23px 18px 10px;
+    outline: none;
+    background: #f7f7f5;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    transition: border 0.3s ease-in;
+  }
+
+  .form-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    left: 18px;
+    top: 20px;
+    transition: 0.2s ease-in;
+  }
+
+  &__btn {
+    margin-top: 32px;
+  }
+
+  .form-group {
+    position: relative;
+    width: 100%;
+    transition: 0.2s ease-in;
+    margin-bottom: 16px;
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-input:focus {
+  background: #ffffff;
+  border: 1px solid #c3c2be;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  font-size: 11px;
+  line-height: 12px;
+  color: #6b6b6b;
+  top: 12px;
+}
+
+.eror-text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  color: #ff5733;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-top: 8px;
+}
+
+.input-erorr .form-input {
+  background: #ffe6e0;
+  border: 1px solid #ff5733 !important;
+}
+
+.input-erorr .eror-text {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .form-input:hover {
+    transition: border 0.2s ease-in-out;
+    border: 1px solid #c3c2be;
+  }
+}

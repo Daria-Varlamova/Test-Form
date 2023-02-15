@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Test Form</title>
+  </head>
+
+  <!-- Инлайновые стили чтобы можно было менять цвет из админки -->
+  <body class="body" style="background-color: #dcf4fe">
+    <div class="page">
+      <div class="container">
+        <div class="card">
+          <div class="text-block">
+            <h1 class="title text-block__title">
+              Заполните форму,<br />
+              чтобы оформить заказ
+            </h1>
+            <span class="text text-block__description">
+              Забронируйте курсы со скидкой, а&nbsp;мы перезвоним,
+              проконсультируем и&nbsp;оформим заказ.
+            </span>
+          </div>
+
+          <div class="card-buy">
+            <h2 class="title-h2 card-buy__title">Итоговая стоимость</h2>
+            <div class="card-buy__item">
+              <div class="card-buy__block">
+                <div class="card-buy__old-price old-price">
+                  <div class="old-price__price">000 000</div>
+                  <span>₽</span>
+                </div>
+                <div class="card-buy__price price">
+                  <span>0 000</span> <sup>₽/мес.</sup>
+                </div>
+                <div class="card-buy__description">Рассрочка на NN месяцев</div>
+              </div>
+              <div
+                class="card-buy__discount"
+                style="background-image: url(/pictures/star.png)"
+              >
+                <span>–</span> <span class="discount">00</span> <span>%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <form class="form form-js">
+            <!-- pay-wrap мб удален -->
+            <div class="pay-wrap">
+              <h2 class="title-h2 title-h2_m">Выберите вариант оплаты</h2>
+
+              <div class="pay-cards">
+                <div class="pay-card">
+                  <label class="pay-card__label">
+                    <input
+                      class="pay-card__input-r"
+                      type="radio"
+                      name="payment-type"
+                    />
+                    <div class="pay-card__box active">
+                      <div class="pay-cards__title">
+                        Оставить заявку <br />
+                        на консультацию
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="pay-card">
+                  <label class="pay-card__label">
+                    <input
+                      class="pay-card__input-r"
+                      type="radio"
+                      name="payment-type"
+                    />
+                    <div class="pay-card__box">
+                      <div class="pay-cards__title">
+                        Оплатить всю сумму со&nbsp;скидкой 7000 ₽
+                      </div>
+
+                      <div class="pay-cards__image">
+                        <img src="./pictures/svg/visa.svg" alt="" />
+                        <img class="icon" src="./pictures/svg/mir.svg" alt="" />
+                        <img src="./pictures/svg/master.svg" alt="" />
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="pay-card">
+                  <label class="pay-card__label">
+                    <input
+                      class="pay-card__input-r"
+                      type="radio"
+                      name="payment-type"
+                    />
+                    <div class="pay-card__box">
+                      <div class="pay-cards__title">
+                        В рассрочку в&nbsp;Покупай со&nbsp;Сбером
+                      </div>
+
+                      <div class="pay-cards__image">
+                        <img src="./pictures/svg/sber.svg" alt="" />
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="pay-card">
+                  <label class="pay-card__label">
+                    <input
+                      class="pay-card__input-r"
+                      type="radio"
+                      name="payment-type"
+                    />
+                    <div class="pay-card__box">
+                      <div class="pay-cards__title">
+                        В рассрочку <br />
+                        в&nbsp;Тинькофф
+                      </div>
+
+                      <div class="pay-cards__image">
+                        <img src="./pictures/svg/tink.svg" alt="" />
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-wrap">
+              <h2 class="title-h2 title-h2_m">Заполните контактные данные</h2>
+
+              <div class="form-group">
+                <input
+                  placeholder=" "
+                  id="user-name"
+                  class="form-input"
+                  type="text"
+                  required
+                />
+                <label for="user-name" class="form-label"> Имя </label>
+              </div>
+              <div class="form-group">
+                <input
+                  inputmode="numeric"
+                  type="tel"
+                  class="form-input telmask"
+                  id="user-phone"
+                  placeholder=" "
+                  autocomplete="off"
+                  required
+                />
+                <span class="eror-text error-text-js" aria-live="polite">
+                  Не верно заполнен phone
+                </span>
+                <label for="user-phone" class="form-label"> Телефон </label>
+              </div>
+              <div class="form-group">
+                <input
+                  placeholder=" "
+                  id="user-email"
+                  class="form-input input-js"
+                  type="text"
+                  required
+                  data-email-pattern
+                />
+                <span class="eror-text error-text-js" aria-live="polite">
+                  Не верно заполнен email
+                </span>
+                <label for="user-email" class="form-label">
+                  Электронная почта
+                </label>
+              </div>
+              <button class="form__btn btn btn-js" type="submit">
+                Отправить
+              </button>
+
+              <div class="politic-block">
+                Нажимая на кнопку, я&nbsp;соглашаюсь на
+                <a href="#">обработку персональных данных</a>
+                и&nbsp;с&nbsp;<a href="#">правилами пользования Платформой</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

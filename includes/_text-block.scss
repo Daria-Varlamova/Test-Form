@@ -1,0 +1,25 @@
+.text-block {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .text-block {
+    margin-bottom: 40px;
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
